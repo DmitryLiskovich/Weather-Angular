@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="Row xs">
+    <div class="Col">
+      <div class="card" style="width: 100%;">
+        <img src="https://source.unsplash.com/1600x900/?nature,weather" class="card-img-top">
+        <div class="card-body">
+          <form (submit)="getWeather($event, cityName)" class="text-center">
+            <div class="form-group">
+              <label for='option'>Enter city name</label>
+              <br>
+              <input #cityName type="text" id="option" placeholder="London" class="city-name" style="width: 80%">
+              <br>
+              <br>
+              <button type="submit" class='btn btn-info'>Submit</button>
+            </div>
+          </form>
+        </div>
+        <div *ngIf="response" class="card-body">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">City name: {{response.name}}</li>
+              <li class="list-group-item">Temperature: {{response.main.temp}}&#176;C</li>
+              <li class="list-group-item">Humidity: {{response.main.humidity}}%</li>
+              <li class="list-group-item">Pressure: {{response.main.pressure}}Pv</li>
+              <li class="list-group-item">Weather: {{response.weather[0].main}}</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
