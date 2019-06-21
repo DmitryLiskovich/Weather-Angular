@@ -8,13 +8,8 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent{
-
-  city:string;
-  temperature:number;
-  humidity:number;
-  pressure:number;
-  weather:string;
-  response:any;
+ 
+  response:object;
 
   constructor(private http: HttpClient) { }
 
@@ -24,8 +19,8 @@ export class WeatherComponent{
     if(!cityName.value) {
       alert('Please enter city name');
     }
-
-    this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=fec8b249edbf6232ae4e5957bd8e7ecf&units=metric`).subscribe(res=>{
+    const test = this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=fec8b249edbf6232ae4e5957bd8e7ecf&units=metric`)
+    .subscribe(res=>{
       console.log(res);
       this.response = res;
     })
