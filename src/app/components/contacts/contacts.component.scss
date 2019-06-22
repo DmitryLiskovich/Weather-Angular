@@ -1,5 +1,5 @@
 .image{
-  height: 60vh;
+  height: 53vh;
   background: url('https://source.unsplash.com/1600x900/daily') center center / cover;
 }
 
@@ -17,15 +17,31 @@ ul{
   font-style: none;
   display: inline;
   padding: 0;
+  margin: 0;
   font-size: 1.2rem;
 }
 
 li{
-
+  text-align: center;
   margin-top: 40px;
   color: black;
   font-style: none;
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
   padding: 0;
+  color: gray;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  &:hover{
+    color: lightblue;
+  }
+}
+
+a{
+  color: grey;
+  transition: all ease-in-out 0.5s;
+  &:hover{
+    color: lightblue;
+  }
 }

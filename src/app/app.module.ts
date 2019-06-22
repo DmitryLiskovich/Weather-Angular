@@ -27,7 +27,7 @@ const appRoutes:Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
